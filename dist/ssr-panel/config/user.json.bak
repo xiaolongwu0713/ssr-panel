@@ -1,0 +1,1 @@
+{"userlist": [{"username": "long2", "password": "xiaowu3", "ssr": {"port": "8978", "password": "password1", "method": "chacha20", "protocol": "auth_sha1_v4", "obfs": "http_simple"}}, {"username": null, "password": null, "ssr": {"port": "8979", "password": null, "method": "aes-256-cfb", "protocol": "origin", "obfs": "plain"}}]}

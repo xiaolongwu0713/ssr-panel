@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SSR register</title>
+  <meta name="description" content="SSR register">
+  <meta name="keywords" content="SSR register">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="/static/home/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="/static/home/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="register" />
+  <link rel="stylesheet" href="/static/home/css/amazeui.min.css" />
+  <link rel="stylesheet" href="/static/home/css/admin.css">
+  <link rel="stylesheet" href="/static/home/css/app.css">
+</head>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<body data-type="login">
+
+  <div class="am-g myapp-login">
+	<div class="myapp-login-logo-block  tpl-login-max">
+		<div class="myapp-login-logo-text">
+			<div class="myapp-login-logo-text">
+				user<span> register</span><br><i class="am-icon-skyatlas"></i>
+				
+			</div>
+		</div>
+		{%for msg in get_flashed_messages(category_filter=['error'])%}
+		<div class="login-font">
+				<span class="label label-danger">{{msg}}</span>
+		</div>
+		{% endfor %}
+
+		<div class="am-u-sm-10 login-am-center">
+			<form class="am-form" method="POST">
+				<fieldset>
+					<div class="am-form-group">
+						{{form.name}}
+					</div>
+					<div class="am-form-group">
+						{{form.pwd}}
+					</div>
+					<div class="am-form-group">
+						{{form.confirm}}
+					</div>
+					<p><button class="am-btn am-btn-default" type="submit">register</button></p>
+					{{form.csrf_token}}
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+  <script src="/static/home/js/jquery.min.js"></script>
+  <script src="/static/home/js/amazeui.min.js"></script>
+  <script src="/static/home/js/app.js"></script>
+</body>
+
+</html>

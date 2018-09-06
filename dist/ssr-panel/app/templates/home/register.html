@@ -1,0 +1,33 @@
+{% extends "home/layout.html" %}
+{% block body %}
+  <div class="am-g myapp-login">
+	<div class="myapp-login-logo-block  tpl-login-max">
+		<div class="myapp-login-logo-text">
+			<div class="myapp-login-logo-text">
+				user<span> register</span><br><i class="am-icon-skyatlas"></i>
+			</div>
+		</div>
+        <div class="section">
+		<div class="am-u-sm-10 login-am-center">
+			<form class="am-form" method="POST">
+				<fieldset>
+					<div class="am-form-group">
+						{{form.name}}
+					</div>
+					<div class="am-form-group">
+						{{form.pwd}}
+					</div>
+					<div class="am-form-group">
+						{{form.confirm}}
+					</div>
+					<p><button class="am-btn am-btn-default" type="submit">register</button></p>
+					{{form.csrf_token}}
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+  <script src="/static/home/js/jquery.min.js"></script>
+  <script src="/static/home/js/amazeui.min.js"></script>
+  <script src="/static/home/js/app.js"></script>
+{% endblock %}

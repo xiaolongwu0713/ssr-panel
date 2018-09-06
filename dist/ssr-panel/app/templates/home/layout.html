@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SSR register</title>
+  <meta name="description" content="SSR register">
+  <meta name="keywords" content="SSR register">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="/static/home/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="/static/home/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="register" />
+  <link rel="stylesheet" href="/static/home/css/amazeui.min.css" />
+  <link rel="stylesheet" href="/static/home/css/admin.css">
+  <link rel="stylesheet" href="/static/home/css/app.css">
+</head>
+
+<title>My Application</title>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% block body %}{% endblock %}

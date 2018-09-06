@@ -1,0 +1,9 @@
+{% extends "home/layout.html" %}
+{% block body %}
+  <h1>Congres! Registration is done.</h1>
+   <div class="content-center brand">
+           <font size="5" color="red"> please wait for 5 seconds after shadowsock server reload your port parameter.</font>
+   </div>
+  <p>Do you want to <a href="{{ url_for('home.login') }}">log in?</a>
+  <p> The next available port isdddd {{ portnum }}</p>
+{% endblock %}
